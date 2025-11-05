@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* -----------------------------------
+-----START :: Pizza Header Section ---
+-------------------------------------*/
+.pizza-header-section {
+    padding: 50px 0 70px;
+
+    .container {
+        .pizza-header-container {
+            display: flex;
+            align-items: center;
+            gap: 54px;
+            justify-content: center;
+
+            .header-logo {
+                width: 313px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .pizza-navbar-list {
+                background: var(--priarmy-color);
+                padding: 18px 50px;
+                display: flex;
+                border-radius: 34px;
+                max-width: 830px;
+                justify-content: space-between;
+                width: 100%;
+
+                .pizza-navbar-item {
+                    .navbar-link {
+                        font-family: Jost;
+                        font-weight: 700;
+                        font-size: 15px;
+                        line-height: 20px;
+                        color: var(--white);
+                        letter-spacing: 2.8px;
+                        min-width: max-content;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .toggle-btn {
+            display: none;
+        }
+    }
+}
+
+/* -----------------------------------
+----- END :: Pizza Header Section ---
+-------------------------------------*/
+/* ############################  */
+/* ############################  */
+/* ############################  */
+/* ############################  */
+/* ############################  */
+/* -----------------------------------
+-----START :: Pizza Hero Section ---
+-------------------------------------*/

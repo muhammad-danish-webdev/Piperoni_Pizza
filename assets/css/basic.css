@@ -1,0 +1,33 @@
+/* Global reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "Jost", sans-serif;
+}
+
+:root {
+    --priarmy-color: #d31217;
+    --gray-black-color: #2A2A2A;
+    --white: #fff;
+}
+
+body {}
+
+/* Center container with max width and side spacing */
+.container {
+    max-width: 1440px;
+    width: calc(100% - 100px);
+    margin: 0 auto;
+}
+
+/* Global Variable Classes  */
+button,
+i,
+a {
+    cursor: pointer;
+}
