@@ -71,7 +71,8 @@
 
     .pizza-hero-container {
         display: grid;
-        grid-template-columns: 39% 55%;
+        grid-template-columns: 33% 67%;
+        gap: 30px;
 
         .hero-container-heading {
             display: flex;
