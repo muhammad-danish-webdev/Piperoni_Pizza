@@ -66,6 +66,33 @@
      /* END :: Header Section */
  }
 
+ /* === Responsive At 992px
+==================================================== */
+ @media (max-width:992px) {
+     .pizza-hero-section {
+         .container {
+             .pizza-hero-container {
+                 .hero-container-heading {
+                     .hero-container-header {
+                         span {}
+                     }
+
+                     .hero-container-desc {
+                         font-size: 16px;
+                         line-height: 23px;
+                     }
+                 }
+
+                 .hero-container-image {
+                     img {}
+                 }
+             }
+         }
+     }
+ }
+
+ /* === Responsive At 992px
+==================================================== */
  @media (max-width:768px) {
      .pizza-header-section {
          padding: 30px 0 50px;
@@ -92,6 +119,38 @@
                      }
 
                      input {}
+                 }
+             }
+         }
+     }
+
+     .pizza-hero-section {
+         .container {
+             width: 80%;
+
+             .pizza-hero-container {
+                 flex-direction: column;
+
+                 .hero-container-heading {
+                     max-width: 100%;
+
+                     .hero-container-header {
+                         font-size: 70px;
+                         line-height: 80px;
+                         text-align: center;
+
+                         span {}
+                     }
+
+                     .hero-container-desc {
+                         text-align: center;
+                     }
+                 }
+
+                 .hero-container-image {
+                     width: 100%;
+
+                     img {}
                  }
              }
          }
