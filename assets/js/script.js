@@ -1,46 +1,38 @@
-/**
- * Toggles the visibility and position of the mobile navigation menu.
- */
-function toggleMobileMenu() {
-  // 1. Get the main navigation element
-  const navList = document.querySelector(".pizza-navbar-list");
+// Function to check if an element is in the viewport
+const isElementInViewport = (el) => {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
 
-  // 2. Get the toggle button elements
-  const burgerIcon = document.querySelector(".burger-icon");
-  const navCloseIcon = document.querySelector(".nav-close-icon");
+// Function to handle the animation application
+const animateHeroSection = () => {
+  // Select the main containers we want to animate
+  const headingContainer = document.querySelector(".hero-container-heading");
+  const imageContainer = document.querySelector(".hero-container-image");
 
-  // 3. Get all navigation links inside the list
-  const navLinks = document.querySelectorAll(".pizza-navbar-list .navbar-link");
+  // Check if the main hero section is visible
+  const heroSection = document.querySelector(".pizza-hero-section");
 
-  if (!navList) return;
+  if (heroSection && isElementInViewport(heroSection)) {
+    // 1. Add class to the image container
+    imageContainer.classList.add("is-visible");
 
-  // Function to hide the menu (slides out to left: 100%)
-  const hideMenu = () => {
-    navList.style.left = "100%";
-  };
+    // 2. Add class to the heading container (which controls h1 and p)
+    headingContainer.classList.add("is-visible");
 
-  // Function to show the menu (slides in to left: 0)
-  const showMenu = () => {
-    navList.style.left = "0%";
-  };
-
-  // --- Attach Event Listeners ---
-
-  // 1. Burger Icon (to open the menu)
-  if (burgerIcon) {
-    burgerIcon.addEventListener("click", showMenu);
+    // Remove the event listener once the animation has been triggered
+    window.removeEventListener("scroll", animateHeroSection);
+    window.removeEventListener("resize", animateHeroSection);
   }
+};
 
-  // 2. Close Icon (to close the menu) - This is the element that should now work reliably
-  if (navCloseIcon) {
-    navCloseIcon.addEventListener("click", hideMenu);
-  }
-
-  // 3. Close menu after clicking a link inside the menu
-  navLinks.forEach((link) => {
-    link.addEventListener("click", hideMenu);
-  });
-}
-
-// Ensure the script runs after the entire HTML document is fully loaded
-document.addEventListener("DOMContentLoaded", toggleMobileMenu);
+// Add event listeners to check on page load and scroll
+window.addEventListener("load", animateHeroSection);
+window.addEventListener("scroll", animateHeroSection);
+window.addEventListener("resize", animateHeroSection);
