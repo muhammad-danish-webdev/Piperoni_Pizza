@@ -183,9 +183,7 @@
     .container {
         .quality-grid-container {
             .quality-grid {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: repeat(7, 1fr);
+                display: flex;
 
                 .quality-image {
                     width: 100%;
