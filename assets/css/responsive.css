@@ -71,6 +71,8 @@
 
      /* END :: Header Section */
      .overview-section {
+         padding: 60px 0;
+
          .container {
              .overview-container {
                  .overview-cards {
@@ -98,10 +100,6 @@
          .container {
              .pizza-hero-container {
                  .hero-container-heading {
-                     .hero-container-header {
-                         span {}
-                     }
-
                      .hero-container-desc {
                          font-size: 16px;
                          line-height: 23px;
