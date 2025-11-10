@@ -5,10 +5,13 @@
 -----START :: Pizza Header Section ---
 -------------------------------------*/
 .bg-image {
-    background-image: url(../media/hero-background-img.jpg);
     position: relative;
+    background-image: url(../media/hero-background-img.jpg);
+    position: absolute;
+    inset: 0;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .pizza-header-section {

@@ -29,6 +29,12 @@
                              font-size: 24px;
                          }
                      }
+
+                     /* Must be added outside your original selector block */
+                     .pizza-navbar-list.active {
+                         left: 0;
+                         /* Moves the navbar from left: 100% to fully visible */
+                     }
                  }
 
                  .toggle-btn {
@@ -119,7 +125,11 @@
      .pizza-menu-section {
          .container {
              .pizza-menu-container {
+                 flex-direction: column;
+
                  .menu-container {
+                     max-width: 100%;
+
                      h4 {}
 
                      .menu-list {
@@ -243,6 +253,49 @@
              .overview-container {
                  .overview-cards {
                      grid-template-columns: 1fr;
+
+                     .overview-card {
+                         .overview-card-content {
+                             gap: 24px;
+
+                             h3 {}
+
+                             p {}
+
+                             .read-more-btn {
+                                 width: 100%;
+                                 text-align: center;
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+
+     .pizza-menu-section {
+         .container {
+             .pizza-menu-container {
+                 .menu-container {
+                     border-radius: 30px;
+                     padding: 36px 26px;
+
+                     h4 {}
+
+                     .menu-list {
+                         gap: 10px;
+
+                         li {
+                             p {
+                                 font-size: 12px;
+                                 line-height: 16px;
+                             }
+                         }
+                     }
+                 }
+
+                 .gourmet-pizza {
+                     h4 {}
                  }
              }
          }
