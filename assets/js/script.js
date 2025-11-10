@@ -36,3 +36,67 @@ const animateHeroSection = () => {
 window.addEventListener("load", animateHeroSection);
 window.addEventListener("scroll", animateHeroSection);
 window.addEventListener("resize", animateHeroSection);
+
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Target the elements you want to animate
+  const cards = document.querySelectorAll(".overview-card");
+
+  // 2. Observer options
+  const observerOptions = {
+    root: null, // viewport ko root consider karega
+    rootMargin: "0px",
+    threshold: 0.1, // Jab element ka 10% dikhna shuru ho jaye
+  };
+
+  // 3. Create the observer function
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Jab element viewport mein enter kare, toh 'is-visible' class add karein
+        // Yeh class animation ko trigger karegi
+        entry.target.classList.add("is-visible");
+
+        // Ek baar animation hone ke baad, observer ko stop kar dein
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // 4. Har card ko observe karna shuru karein
+  cards.forEach((card, index) => {
+    // Staggered effect dene ke liye, CSS variable set karein
+    card.style.setProperty("--animation-delay", `${index * 150}ms`);
+    observer.observe(card);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Target the image containers
+  const imageElements = document.querySelectorAll(".quality-image");
+
+  // Observer options (jab 10% dikhna shuru ho jaye)
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  // Observer function
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // 'is-visible' class add karein
+        entry.target.classList.add("is-visible");
+        // Ek baar animation hone ke baad, observing stop kar dein
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Har image element ko observe karna shuru karein aur delay set karein
+  imageElements.forEach((image, index) => {
+    // Staggered delay (50ms ka farq) set karein
+    image.style.setProperty("--animation-delay", `${index * 50}ms`);
+    observer.observe(image);
+  });
+});

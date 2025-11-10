@@ -16,7 +16,9 @@
     --white: #fff;
 }
 
-body {}
+body {
+    background-color: #ededeb;
+}
 
 /* Center container with max width and side spacing */
 .container {

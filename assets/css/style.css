@@ -4,8 +4,15 @@
 /* -----------------------------------
 -----START :: Pizza Header Section ---
 -------------------------------------*/
+.bg-image {
+    background-image: url(../media/hero-background-img.jpg);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .pizza-header-section {
-    padding: 50px 0 70px;
+    padding: 50px 0 64px;
 
     /* font-family: "Aleo", serif; */
     /* font-family: "Jost", sans-serif; */
@@ -67,6 +74,8 @@
 -----START :: Pizza Hero Section ---
 -------------------------------------*/
 .pizza-hero-section {
+    padding-bottom: 72px;
+
     .container {
         width: 100%;
 
@@ -180,7 +189,7 @@
 -----START   :: Pizza Quality Section ---
 -------------------------------------*/
 .quality-grid-section {
-    padding: 100px 0;
+    background: linear-gradient(to bottom, #e8e2d8, #ededeb);
 
     .quality-grid-container {
         .quality-grid {
@@ -200,6 +209,28 @@
                     border-bottom-right-radius: 38px;
                 }
             }
+
+            /* --- 1. Initial State (Hidden and Zoomed Out) --- */
+            .quality-image {
+                /* Animation ki speed control karein */
+                transition:
+                    opacity 0.6s ease-out,
+                    transform 0.6s ease-out;
+                /* Initially hide (opacity 0) */
+                opacity: 0;
+                /* Initially chhota karein (Zoom Out: 90% size) */
+                transform: scale(0.9);
+                /* JS se milne wala delay apply karein */
+                transition-delay: var(--animation-delay);
+            }
+
+            /* --- 2. Final State (Visible and Full Size) --- */
+            .quality-image.is-visible {
+                /* Fully visible (opacity 1) */
+                opacity: 1;
+                /* Original size par wapas laayein */
+                transform: scale(1);
+            }
         }
     }
 }
@@ -214,6 +245,8 @@
 -----END :: Pizza Quality Section ---
 -------------------------------------*/
 .overview-section {
+    padding: 100px 0;
+
     .container {
         .overview-container {
             .overview-cards {
@@ -247,10 +280,10 @@
                         h3 {
                             color: var(--priarmy-color);
                             font-weight: 700;
-                            font-size: 30px;
                             line-height: 35px;
-                            letter-spacing: 15%;
                             font-family: "Jost", sans-serif;
+                            font-size: clamp(1.5rem, 2vw, 30px);
+                            letter-spacing: 2px;
                         }
 
                         p {
@@ -276,6 +309,26 @@
                         }
                     }
                 }
+
+                /* --- 1. Initial State (Cards jab hidden hon) --- */
+                .overview-card {
+                    /* Animation ki speed aur property ko define karein */
+                    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+                    /* Initially hide the element (Opacity 0) */
+                    opacity: 0;
+                    /* Initially move it 30px down (Fade-In Up effect) */
+                    transform: translateY(80px);
+                    /* Staggered delay apply karein jo JS se set hoga */
+                    transition-delay: var(--animation-delay);
+                }
+
+                /* --- 2. Final State (Jab JS se 'is-visible' class lagegi) --- */
+                .overview-card.is-visible {
+                    /* Jab yeh class lagegi, toh element visible ho jayega */
+                    opacity: 1;
+                    /* Aur apni original position par wapas aa jayega */
+                    transform: translateY(0);
+                }
             }
         }
     }
@@ -284,3 +337,36 @@
 /* -----------------------------------
 -----END :: Pizza Quality Section ---
 -------------------------------------*/
+/* #######################  */
+/* #######################  */
+/* #######################  */
+/* #######################  */
+/* #######################  */
+/* -----------------------------------
+----- START :: Brand Statement Section ---
+-------------------------------------*/
+.brand-statement {
+    width: 100%;
+    height: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* -----------------------------------
+-----END :: Brand Statement Section ---
+-------------------------------------*/
+/* #######################  */
+/* #######################  */
+/* #######################  */
+/* #######################  */
+/* #######################  */
+.pizza-menu-section {
+    .container {
+        .pizza-menu-container {
+            .menu-container {}
+        }
+    }
+}
