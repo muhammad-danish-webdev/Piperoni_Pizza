@@ -364,9 +364,58 @@
 /* #######################  */
 /* #######################  */
 .pizza-menu-section {
+    padding: 156px 0 110px;
+
     .container {
         .pizza-menu-container {
-            .menu-container {}
+            display: flex;
+            gap: 64px;
+            justify-content: center;
+
+            .menu-container {
+                max-width: 530px;
+                width: 100%;
+                padding: 62px 48px;
+                border-radius: 50px;
+                background: white;
+
+                h4 {
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 25px;
+                    color: var(--priarmy-color);
+                }
+
+                .menu-list {
+                    padding-top: 13px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+
+                    li {
+                        p {
+                            font-weight: 400;
+                            font-size: 1.65vw;
+                            line-height: 2.4vw;
+                        }
+                    }
+                }
+            }
+
+            .gourmet-pizza {
+                background: var(--gray-black-color);
+                color: white;
+
+                h4 {
+                    color: white;
+                }
+
+                .menu-list {
+                    li {
+                        p {}
+                    }
+                }
+            }
         }
     }
 }
