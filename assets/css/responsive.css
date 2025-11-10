@@ -146,6 +146,26 @@
              }
          }
      }
+
+     .quality-grid-section {
+         .quality-grid-container {
+             .quality-grid {
+                 aspect-ratio: 1;
+                 flex-direction: column;
+                 margin: 0 auto;
+
+                 .quality-image {
+                     height: 80%;
+                     width: 80%;
+                     margin: 0 auto;
+
+                     img {
+                         border-radius: 18px;
+                     }
+                 }
+             }
+         }
+     }
  }
 
  /* === Responsive At 576px
