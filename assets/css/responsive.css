@@ -106,38 +106,39 @@
              }
          }
      }
- }
 
- /* ################### */
- /* ################### */
- /* ################### */
- /* ################### */
- /* ################### */
- /* ################### */
- /* #########################  */
- /* #########################  */
- /* #########################  */
- /* #########################  */
- /* #########################  */
- .pizza-menu-section {
-     .container {
-         .pizza-menu-container {
-             flex-direction: column;
+     /* ################### */
+     /* ################### */
+     /* ################### */
+     /* ################### */
+     /* ################### */
+     /* ################### */
+     /* #########################  */
+     /* #########################  */
+     /* #########################  */
+     /* #########################  */
+     /* #########################  */
+     .pizza-menu-section {
+         .container {
+             .pizza-menu-container {
+                 flex-direction: column;
 
-             .menu-container {
-                 max-width: 100%;
+                 .menu-container {
+                     max-width: 100%;
+                     width: 100%;
+                     padding: 40px 32px;
+                     border-radius: 26px;
 
-                 h4 {}
-
-                 .menu-list {
-                     li {
-                         p {}
+                     .menu-list {
+                         li {
+                             p {}
+                         }
                      }
                  }
-             }
 
-             .gourmet-pizza {
-                 h4 {}
+                 .gourmet-pizza {
+                     h4 {}
+                 }
              }
          }
      }
@@ -172,14 +173,15 @@
          padding-bottom: 50px;
 
          .container {
-             width: 80%;
+             width: 95%;
 
              .pizza-hero-container {
                  flex-direction: column;
 
                  .hero-container-heading {
                      padding-left: 0;
-                     max-width: 100%;
+                     max-width: 80%;
+                     margin: 0 auto;
 
                      .hero-container-header {
                          font-size: 80px;
@@ -239,6 +241,8 @@
      }
 
      .overview-section {
+         padding-block: 60px;
+
          .container {
              width: calc(100% - 36px);
 
@@ -248,7 +252,8 @@
 
                      .overview-card {
                          .overview-card-content {
-                             gap: 24px;
+                             padding: 26px 20px;
+                             gap: 14px;
 
                              h3 {}
 
@@ -266,7 +271,11 @@
      }
 
      .pizza-menu-section {
+         padding: 60px 0;
+
          .container {
+             width: calc(100% - 50px);
+
              .pizza-menu-container {
                  .menu-container {
                      border-radius: 30px;
@@ -279,8 +288,8 @@
 
                          li {
                              p {
-                                 font-size: 12px;
-                                 line-height: 16px;
+                                 font-size: 16px;
+                                 line-height: 22px;
                              }
                          }
                      }
@@ -312,6 +321,27 @@
                      .hero-container-header {
                          font-size: 38px;
                          line-height: 44px;
+                     }
+                 }
+             }
+         }
+     }
+
+     .pizza-menu-section {
+         padding: 40px 0;
+
+         .container {
+             width: calc(100% - 30px);
+
+             .pizza-menu-container {
+                 gap: 30px;
+
+                 .menu-container {
+                     border-radius: 24px;
+                     padding: 26px 20px;
+
+                     .menu-list {
+                         gap: 10px;
                      }
                  }
              }

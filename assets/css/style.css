@@ -264,7 +264,7 @@
 -----END :: Pizza Quality Section ---
 -------------------------------------*/
 .overview-section {
-    padding: 9vw 0;
+    padding-block: min(7vw, 100px);
 
     .container {
         .overview-container {
@@ -384,7 +384,7 @@
 /* #######################  */
 /* #######################  */
 .pizza-menu-section {
-    padding: 110px 0;
+    padding: 130px 0 100px;
 
     .container {
         .pizza-menu-container {
