@@ -1,68 +1,69 @@
  /* Responsive At 1024px  */
  @media (max-width:1024px) {
-     .pizza-header-section {
-         .container {
-             .pizza-header-container {
-                 position: relative;
-                 justify-content: space-between;
+     .bg-image {
+         .pizza-header-section {
+             .container {
+                 .pizza-header-container {
+                     position: relative;
+                     justify-content: space-between;
 
-                 .header-logo {
-                     width: 170px;
-                 }
+                     .header-logo {
+                         width: 170px;
+                     }
 
-                 .pizza-navbar-list {
-                     position: fixed;
-                     padding-top: 16%;
-                     background: var(--priarmy-color);
-                     top: 0;
-                     left: 100%;
-                     max-width: 100%;
-                     flex-direction: column;
-                     gap: 70px;
-                     height: 100vh;
-                     justify-content: flex-start;
-                     align-items: center;
-                     transition: all .3s ease;
+                     .pizza-navbar-list {
+                         position: fixed;
+                         padding-top: 16%;
+                         background: var(--priarmy-color);
+                         top: 0;
+                         left: 100%;
+                         max-width: 100%;
+                         flex-direction: column;
+                         gap: 70px;
+                         height: 100vh;
+                         justify-content: flex-start;
+                         align-items: center;
+                         transition: all .3s ease;
 
-                     .pizza-navbar-item {
-                         .navbar-link {
-                             font-size: 24px;
+                         .pizza-navbar-item {
+                             .navbar-link {
+                                 font-size: 24px;
+                             }
                          }
                      }
 
                      /* Must be added outside your original selector block */
                      .pizza-navbar-list.active {
                          left: 0;
-                         /* Moves the navbar from left: 100% to fully visible */
-                     }
-                 }
-
-                 .toggle-btn {
-                     display: none;
-                     position: absolute;
-                     right: 20px;
-
-                     i {
-                         font-size: 40px;
-                         color: var(--priarmy-color);
                      }
 
-                     input {
+                     .toggle-btn {
                          display: none;
+                         position: absolute;
+                         right: 20px;
+
+                         i {
+                             font-size: 40px;
+                             color: var(--priarmy-color);
+                         }
+
+                         input {
+                             display: none;
+                         }
                      }
-                 }
 
-                 .burger-icon {
-                     display: block;
-                 }
+                     .burger-icon {
+                         display: block;
+                     }
 
-                 .nav-close-icon {
-                     display: block;
-                     left: 37px;
-                     top: 30px;
+                     .nav-close-icon {
+                         display: block;
+                         left: 37px;
+                         top: 30px;
 
-                     i {
-                         color: var(--white);
+                         i {
+                             color: var(--white);
+                         }
                      }
                  }
              }
@@ -71,8 +72,6 @@
 
      /* END :: Header Section */
      .overview-section {
-         padding: 60px 0;
-
          .container {
              .overview-container {
                  .overview-cards {
@@ -96,13 +95,15 @@
  /* === Responsive At 992px
 ==================================================== */
  @media (max-width:992px) {
-     .pizza-hero-section {
-         .container {
-             .pizza-hero-container {
-                 .hero-container-heading {
-                     .hero-container-desc {
-                         font-size: 16px;
-                         line-height: 23px;
+     .bg-image {
+         .pizza-hero-section {
+             .container {
+                 .pizza-hero-container {
+                     .hero-container-heading {
+                         .hero-container-desc {
+                             font-size: 16px;
+                             line-height: 23px;
+                         }
                      }
                  }
              }
@@ -148,54 +149,58 @@
  /* === Responsive At 992px
 ==================================================== */
  @media (max-width:768px) {
-     .pizza-header-section {
-         padding: 30px 0 50px;
+     .bg-image {
+         .pizza-header-section {
+             padding: 30px 0 50px;
 
-         .container {
-             width: calc(100% - 60px);
+             .container {
+                 width: calc(100% - 60px);
 
-             .pizza-header-container {
-                 .header-logo {
-                     width: 100px;
-                 }
+                 .pizza-header-container {
+                     .header-logo {
+                         width: 100px;
+                     }
 
-                 .toggle-btn {
-                     right: 0px;
+                     .toggle-btn {
+                         right: 0px;
 
-                     i {
-                         font-size: 22px;
+                         i {
+                             font-size: 22px;
+                         }
                      }
                  }
              }
          }
-     }
 
-     .pizza-hero-section {
-         .container {
-             width: 80%;
+         .pizza-hero-section {
+             padding-bottom: 50px;
 
-             .pizza-hero-container {
-                 flex-direction: column;
+             .container {
+                 width: 80%;
 
-                 .hero-container-heading {
-                     padding-left: 0;
-                     max-width: 100%;
+                 .pizza-hero-container {
+                     flex-direction: column;
 
-                     .hero-container-header {
-                         font-size: 80px;
-                         line-height: 80px;
-                         text-align: center;
+                     .hero-container-heading {
+                         padding-left: 0;
+                         max-width: 100%;
+
+                         .hero-container-header {
+                             font-size: 80px;
+                             line-height: 80px;
+                             text-align: center;
+                         }
+
+                         .hero-container-desc {
+                             text-align: center;
+                         }
                      }
 
-                     .hero-container-desc {
-                         text-align: center;
+                     .hero-container-image {
+                         width: 100%;
+
+                         img {}
                      }
-                 }
-
-                 .hero-container-image {
-                     width: 100%;
-
-                     img {}
                  }
              }
          }

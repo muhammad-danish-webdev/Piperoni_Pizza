@@ -1,3 +1,39 @@
+// Header Navbar Opening Closing Logic
+// Get elements
+const navToggle = document.getElementById("nav-toggle");
+const navbarList = document.querySelector(".pizza-navbar-list");
+const burgerIcon = document.querySelector(".burger-icon");
+const closeIcon = document.querySelector(".nav-close-icon");
+
+// Open menu when burger icon is clicked
+burgerIcon.addEventListener("click", function (e) {
+  e.stopPropagation();
+  navbarList.classList.add("active");
+});
+
+// Close menu when close icon is clicked
+closeIcon.addEventListener("click", function (e) {
+  e.stopPropagation();
+  navbarList.classList.remove("active");
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", function (event) {
+  if (
+    !navbarList.contains(event.target) &&
+    !burgerIcon.contains(event.target)
+  ) {
+    navbarList.classList.remove("active");
+  }
+});
+
+// Close menu when clicking on nav links (optional)
+document.querySelectorAll(".navbar-link").forEach((link) => {
+  link.addEventListener("click", function () {
+    navbarList.classList.remove("active");
+  });
+});
+
 // Function to check if an element is in the viewport
 const isElementInViewport = (el) => {
   const rect = el.getBoundingClientRect();

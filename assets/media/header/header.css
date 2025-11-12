@@ -7,180 +7,179 @@
 .bg-image {
     position: relative;
     background-image: url(../media/hero-background-img.jpg);
+    position: absolute;
     inset: 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
 
-    .pizza-header-section {
-        padding: 50px 0 64px;
-        position: relative;
-        z-index: 1;
+.pizza-header-section {
+    padding: 50px 0 64px;
 
-        /* font-family: "Aleo", serif; */
-        /* font-family: "Jost", sans-serif; */
-        .container {
-            .pizza-header-container {
-                display: flex;
-                align-items: center;
-                gap: 54px;
-                justify-content: center;
+    /* font-family: "Aleo", serif; */
+    /* font-family: "Jost", sans-serif; */
+    .container {
+        .pizza-header-container {
+            display: flex;
+            align-items: center;
+            gap: 54px;
+            justify-content: center;
 
-                .header-logo {
-                    width: 313px;
+            .header-logo {
+                width: 313px;
 
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-
-                .pizza-navbar-list {
-                    background: var(--priarmy-color);
-                    padding: 18px 50px;
-                    display: flex;
-                    border-radius: 34px;
-                    max-width: 830px;
-                    justify-content: space-between;
+                img {
                     width: 100%;
-
-                    .pizza-navbar-item {
-                        .navbar-link {
-                            font-family: Jost;
-                            font-weight: 700;
-                            font-size: 15px;
-                            line-height: 20px;
-                            color: var(--white);
-                            letter-spacing: 2.8px;
-                            min-width: max-content;
-                            display: block;
-                        }
-                    }
+                    height: 100%;
                 }
             }
 
-            .toggle-btn {
-                display: none;
+            .pizza-navbar-list {
+                background: var(--priarmy-color);
+                padding: 18px 50px;
+                display: flex;
+                border-radius: 34px;
+                max-width: 830px;
+                justify-content: space-between;
+                width: 100%;
+
+                .pizza-navbar-item {
+                    .navbar-link {
+                        font-family: Jost;
+                        font-weight: 700;
+                        font-size: 15px;
+                        line-height: 20px;
+                        color: var(--white);
+                        letter-spacing: 2.8px;
+                        min-width: max-content;
+                        display: block;
+                    }
+                }
             }
         }
-    }
 
-    /* -----------------------------------
+        .toggle-btn {
+            display: none;
+        }
+    }
+}
+
+/* -----------------------------------
 ----- END :: Pizza Header Section ---
 -------------------------------------*/
-    /* ############################  */
-    /* ############################  */
-    /* ############################  */
-    /* ############################  */
-    /* ############################  */
-    /* -----------------------------------
+/* ############################  */
+/* ############################  */
+/* ############################  */
+/* ############################  */
+/* ############################  */
+/* -----------------------------------
 -----START :: Pizza Hero Section ---
 -------------------------------------*/
-    .pizza-hero-section {
-        padding-bottom: 72px;
+.pizza-hero-section {
+    padding-bottom: 72px;
 
-        .container {
-            width: 100%;
+    .container {
+        width: 100%;
 
-            .pizza-hero-container {
+        .pizza-hero-container {
+            display: flex;
+            gap: 30px;
+            overflow: hidden;
+
+            .hero-container-heading {
                 display: flex;
-                gap: 30px;
-                overflow: hidden;
+                flex-direction: column;
+                justify-content: end;
+                gap: 42px;
+                max-width: 38%;
+                padding-left: 7%;
 
-                .hero-container-heading {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: end;
-                    gap: 42px;
-                    max-width: 38%;
-                    padding-left: 7%;
+                .hero-container-header {
+                    color: var(--gray-black-color);
+                    font-family: "Jost";
+                    font-weight: 700;
+                    font-size: 5.5vw;
+                    line-height: 5.7vw;
+                    letter-spacing: 9px;
+                    text-transform: uppercase;
 
-                    .hero-container-header {
-                        color: var(--gray-black-color);
-                        font-family: "Jost";
-                        font-weight: 700;
-                        font-size: 5.5vw;
-                        line-height: 5.7vw;
-                        letter-spacing: 9px;
-                        text-transform: uppercase;
-
-                        span {
-                            color: var(--priarmy-color);
-                        }
-                    }
-
-                    .hero-container-desc {
-                        font-size: 20px;
-                        line-height: 28px;
-                        font-weight: 400;
-                        font-family: "Aleo", serif;
-                        color: #5C6B73;
+                    span {
+                        color: var(--priarmy-color);
                     }
                 }
 
-                .hero-container-image {
-                    width: 56vw;
-                    height: 100%;
-                    margin-right: -3%;
+                .hero-container-desc {
+                    font-size: 20px;
+                    line-height: 28px;
+                    font-weight: 400;
+                    font-family: "Aleo", serif;
+                    color: #5C6B73;
+                }
+            }
 
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
+            .hero-container-image {
+                width: 56vw;
+                height: 100%;
+                margin-right: -3%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }
     }
+}
 
-    /* Keyframe for the Text (Slide Up and Fade In) */
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Keyframe for the Image (Slide Right and Fade In) */
-    @keyframes fadeInRight {
-        from {
-            opacity: 0;
-            transform: translateX(30px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    /* Apply Fade-Up animation to the main text container */
-    .hero-container-heading {
-        animation: fadeInUp 1s ease-out forwards;
+/* Keyframe for the Text (Slide Up and Fade In) */
+@keyframes fadeInUp {
+    from {
         opacity: 0;
-        /* Start invisible */
-        animation-delay: 0.2s;
-        /* Start after a brief moment */
+        transform: translateY(20px);
     }
 
-    /* Apply Fade-Right animation to the Image */
-    .hero-container-image {
-        animation: fadeInRight 1.2s ease-out forwards;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframe for the Image (Slide Right and Fade In) */
+@keyframes fadeInRight {
+    from {
         opacity: 0;
-        /* Start invisible */
-        animation-delay: 0.5s;
-        /* Start slightly later than the text */
+        transform: translateX(30px);
     }
 
-    /* Apply Highlight animation to the <span> */
-    .hero-container-header span {
-        animation: highlight 3s infinite 1.5s;
-        /* Repeats infinitely, starts after 1.5s */
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
+}
+
+/* Apply Fade-Up animation to the main text container */
+.hero-container-heading {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+    /* Start invisible */
+    animation-delay: 0.2s;
+    /* Start after a brief moment */
+}
+
+/* Apply Fade-Right animation to the Image */
+.hero-container-image {
+    animation: fadeInRight 1.2s ease-out forwards;
+    opacity: 0;
+    /* Start invisible */
+    animation-delay: 0.5s;
+    /* Start slightly later than the text */
+}
+
+/* Apply Highlight animation to the <span> */
+.hero-container-header span {
+    animation: highlight 3s infinite 1.5s;
+    /* Repeats infinitely, starts after 1.5s */
 }
 
 /* -----------------------------------
@@ -413,6 +412,75 @@
 
                 h4 {
                     color: white;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .pizza-header-section {
+        .container {
+            .pizza-header-container {
+                position: relative;
+                justify-content: space-between;
+
+                .header-logo {
+                    width: 170px;
+                }
+
+                .pizza-navbar-list {
+                    position: fixed;
+                    padding-top: 16%;
+                    background: var(--priarmy-color);
+                    top: 0;
+                    left: 100%;
+                    max-width: 100%;
+                    flex-direction: column;
+                    gap: 70px;
+                    height: 100vh;
+                    justify-content: flex-start;
+                    align-items: center;
+                    transition: all .3s ease;
+
+                    .pizza-navbar-item {
+                        .navbar-link {
+                            font-size: 24px;
+                        }
+                    }
+                }
+
+                .pizza-navbar-list.active {
+                    left: 0;
+                }
+
+                .toggle-btn {
+                    display: none;
+                    position: absolute;
+                    right: 20px;
+
+                    i {
+                        font-size: 40px;
+                        color: var(--priarmy-color);
+                    }
+
+                    input {
+                        display: none;
+                    }
+                }
+
+                .burger-icon {
+                    display: block;
+                }
+
+                .nav-close-icon {
+                    display: block;
+                    left: 37px;
+                    top: 30px;
+
+                    i {
+                        color: var(--white);
+                    }
                 }
             }
         }
