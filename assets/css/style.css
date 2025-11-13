@@ -1,5 +1,5 @@
-/* Font Family Jost & Aleo  */
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+/* Font Family Jost & Aleo & DM Sans  */
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* -----------------------------------
 -----START :: Pizza Header Section ---
@@ -51,14 +51,13 @@
                 background: var(--priarmy-color);
                 padding: 18px 50px;
                 display: flex;
-                border-radius: 34px;
+                border-radius: 22px;
                 max-width: 830px;
                 justify-content: space-between;
                 width: 100%;
 
                 .pizza-navbar-item {
                     .navbar-link {
-                        font-family: Jost;
                         font-weight: 700;
                         font-size: 15px;
                         line-height: 20px;
@@ -208,7 +207,6 @@
 .quality-grid-section {
     background: linear-gradient(to bottom, #e8e2d8, #ededeb);
     position: relative;
-    z-index: 2;
 
     .quality-grid-container {
         .quality-grid {
@@ -300,6 +298,7 @@
                             color: var(--priarmy-color);
                             font-weight: 700;
                             line-height: 35px;
+                            line-height: clamp(1.8rem, 2.4vw, 36px);
                             font-family: "Jost", sans-serif;
                             font-size: clamp(1.5rem, 2vw, 30px);
                             letter-spacing: 2px;
@@ -311,6 +310,7 @@
                             font-size: 15px;
                             line-height: 25px;
                             color: #5C6B73;
+                            padding-bottom: 8px;
                         }
 
                         .read-more-btn {
@@ -319,13 +319,22 @@
                             color: white;
                             background: var(--priarmy-color);
                             margin: 0 auto;
-                            font-family: Jost;
                             font-weight: 600;
                             font-size: 15px;
                             line-height: 20px;
                             letter-spacing: 2px;
                             margin-top: auto;
                             min-width: max-content;
+                            transition: all .3s ease;
+
+                            &:hover {
+                                background: black;
+                            }
+
+                            &:active {
+                                background: black;
+                                transform: scale(.93);
+                            }
                         }
                     }
                 }
@@ -383,6 +392,9 @@
 /* #######################  */
 /* #######################  */
 /* #######################  */
+/* -----------------------------------
+-----START :: Pizza Menu Section ---
+-------------------------------------*/
 .pizza-menu-section {
     padding: 130px 0 100px;
 
@@ -433,3 +445,103 @@
         }
     }
 }
+
+/* -----------------------------------
+-----END :: Pizza Menu Section ---
+-------------------------------------*/
+/* #######################  */
+/* #######################  */
+/* #######################  */
+/* #######################  */
+/* #######################  */
+/* -----------------------------------
+-----START :: Pizza Form  Section ---
+-------------------------------------*/
+.pizza-form-section {
+    .container {
+        .pizza-form-container {
+            h2 {
+                font-weight: 700;
+                font-size: min(2.5vw, 25px);
+                line-height: min(3.5vw, 35px);
+                text-align: center;
+                text-transform: uppercase;
+                width: 66%;
+                margin: 0 auto;
+                letter-spacing: 3px;
+            }
+
+            .form-container {
+                padding: 61px 0;
+                max-width: 900px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                margin: 0 auto;
+
+                div {
+                    display: flex;
+                    gap: 25px;
+                }
+
+                input {
+                    padding: 10px 0 10px 24px;
+                    border: none;
+                    font-family: "DM Sans", sans-serif;
+                    border-radius: 10px;
+                    color: black;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 35px;
+
+                    &::placeholder {
+                        color: #cec4c4;
+                        font-family: "DM Sans", sans-serif;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 35px;
+                    }
+                }
+
+                .name-date-inputs {
+                    input {
+                        width: 33%;
+                    }
+                }
+
+                .date-event-inputs {
+                    input {
+                        width: 50%;
+                    }
+                }
+
+                .message-input {
+                    input {
+                        padding: 10px 0 40px 24px;
+                    }
+                }
+
+                .submit-btn {
+                    min-width: max-content;
+                    max-width: max-content;
+                    margin: 0 auto;
+                    font-weight: 700;
+                    font-size: 15px;
+                    letter-spacing: 2px;
+                    line-height: 20px;
+                    text-transform: uppercase;
+                    padding: 5px 30px;
+                    border-radius: 200px;
+                    border: none;
+                    background-color: red;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+/* -----------------------------------
+-----END :: Pizza Form Section ---
+-------------------------------------*/

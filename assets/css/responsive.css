@@ -12,15 +12,14 @@
 
                  .pizza-navbar-list {
                      position: fixed;
-                     padding-top: 16%;
                      background: var(--priarmy-color);
                      top: 0;
                      left: 100%;
                      max-width: 100%;
                      flex-direction: column;
-                     gap: 70px;
+                     gap: 40px;
                      height: 100vh;
-                     justify-content: flex-start;
+                     justify-content: center;
                      align-items: center;
                      transition: all .3s ease;
                      z-index: 1;
@@ -40,7 +39,7 @@
                  .toggle-btn {
                      display: none;
                      position: absolute;
-                     right: 20px;
+                     right: 0px;
 
                      i {
                          font-size: 40px;
@@ -58,8 +57,9 @@
 
                  .nav-close-icon {
                      display: block;
-                     left: 37px;
-                     top: 30px;
+                     right: 60px;
+                     top: 84px;
+                     max-width: max-content;
 
                      i {
                          color: var(--white);
@@ -94,6 +94,36 @@
  /* === Responsive At 992px
 ==================================================== */
  @media (max-width:992px) {
+     .pizza-header-section {
+         .container {
+             .pizza-header-container {
+                 position: relative;
+                 justify-content: space-between;
+
+                 .pizza-navbar-list.active {
+                     left: 0;
+                 }
+
+                 .nav-close-icon {
+                     display: block;
+                     right: 60px;
+                     top: 84px;
+                     max-width: max-content;
+                 }
+
+                 .burger-icon {
+                     display: block;
+                 }
+             }
+         }
+     }
+
+     /* ################### */
+     /* ################### */
+     /* ################### */
+     /* ################### */
+     /* ################### */
+     /* ################### */
      .pizza-hero-section {
          .container {
              .pizza-hero-container {
@@ -107,18 +137,14 @@
          }
      }
 
-     /* ################### */
-     /* ################### */
-     /* ################### */
-     /* ################### */
-     /* ################### */
-     /* ################### */
      /* #########################  */
      /* #########################  */
      /* #########################  */
      /* #########################  */
      /* #########################  */
      .pizza-menu-section {
+         padding: 80px 0;
+
          .container {
              .pizza-menu-container {
                  flex-direction: column;
@@ -135,17 +161,47 @@
                          }
                      }
                  }
+             }
+         }
+     }
 
-                 .gourmet-pizza {
-                     h4 {}
+     /* ###################  */
+     /* ###################  */
+     /* ###################  */
+     /* ###################  */
+     .pizza-form-section {
+         .container {
+             .pizza-form-container {
+                 h2 {
+                     width: 90%;
+                 }
+
+                 .form-container {
+                     div {
+                         display: flex;
+                         flex-direction: column;
+                     }
+
+                     .name-date-inputs {
+                         input {
+                             width: 100%;
+                         }
+                     }
+
+                     .date-event-inputs {
+                         input {
+                             width: 100%;
+                         }
+                     }
                  }
              }
          }
      }
+
+     /* === Responsive At 992px
+==================================================== */
  }
 
- /* === Responsive At 992px
-==================================================== */
  @media (max-width:768px) {
      .pizza-header-section {
          padding: 30px 0 50px;
@@ -159,10 +215,19 @@
                  }
 
                  .toggle-btn {
-                     right: 0px;
-
                      i {
                          font-size: 22px;
+                     }
+                 }
+
+                 .nav-close-icon {
+                     display: block;
+                     right: 34px;
+                     top: 58px;
+                     max-width: max-content;
+
+                     i {
+                         color: var(--white);
                      }
                  }
              }
@@ -196,28 +261,49 @@
 
                  .hero-container-image {
                      width: 100%;
-
-                     img {}
                  }
              }
          }
      }
- }
 
- .quality-grid-section {
-     .quality-grid-container {
-         .quality-grid {
-             aspect-ratio: 1;
-             flex-direction: column;
-             margin: 0 auto;
-
-             .quality-image {
-                 height: 80%;
-                 width: 80%;
+     .quality-grid-section {
+         .quality-grid-container {
+             .quality-grid {
+                 aspect-ratio: 1;
+                 flex-direction: column;
                  margin: 0 auto;
 
-                 img {
-                     border-radius: 18px;
+                 .quality-image {
+                     height: 94%;
+                     width: 94%;
+                     margin: 0 auto;
+
+                     img {
+                         border-radius: 18px;
+                     }
+                 }
+             }
+         }
+     }
+
+     .pizza-form-section {
+         .container {
+             .pizza-form-container {
+                 h2 {
+                     font-size: 18px;
+                     line-height: 26px;
+                 }
+
+                 .form-container {
+                     div {}
+
+                     .name-date-inputs {
+                         input {}
+                     }
+
+                     .date-event-inputs {
+                         input {}
+                     }
                  }
              }
          }
@@ -251,9 +337,16 @@
                      grid-template-columns: 1fr;
 
                      .overview-card {
+                         border-radius: 18px;
+
                          .overview-card-content {
-                             padding: 26px 20px;
-                             gap: 14px;
+                             padding: 12px 20px 18px;
+                             gap: 12px;
+
+                             p {
+                                 font-size: 13px;
+                                 line-height: 20px;
+                             }
 
                              .read-more-btn {
                                  width: 100%;
@@ -290,9 +383,31 @@
                          }
                      }
                  }
+             }
+         }
+     }
 
-                 .gourmet-pizza {
-                     h4 {}
+     .pizza-form-section {
+         .container {
+             width: calc(100% - 50px);
+
+             .pizza-form-container {
+                 h2 {
+                     width: 100%;
+                     font-size: 15px;
+                     line-height: 20px;
+                 }
+
+                 .form-container {
+                     div {}
+
+                     .name-date-inputs {
+                         input {}
+                     }
+
+                     .date-event-inputs {
+                         input {}
+                     }
                  }
              }
          }
@@ -338,6 +453,39 @@
 
                      .menu-list {
                          gap: 10px;
+                     }
+                 }
+             }
+         }
+     }
+
+     .pizza-form-section {
+         .container {
+             .pizza-form-container {
+                 h2 {
+                     font-size: 18px;
+                     line-height: 26px;
+                 }
+
+                 .form-container {
+                     gap: 10px;
+
+                     div {
+                         gap: 10px;
+
+                         input {
+                             padding: 6px 0 6px 14px;
+                         }
+                     }
+
+                     .name-date-inputs {
+                         input {
+                             font-size: 14px;
+                         }
+                     }
+
+                     .date-event-inputs {
+                         input {}
                      }
                  }
              }
