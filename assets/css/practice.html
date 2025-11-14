@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Input Border</title>
+
+    <style>
+      /* CSS is embedded here inside the <style> tag */
+
+      .input-container {
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      #myInput {
+        /* Initial state */
+        padding: 10px;
+        border: 2px solid #ccc; /* Light grey border initially */
+        border-radius: 5px;
+        font-size: 16px;
+        width: 250px;
+        outline: none; /* Removes the default browser focus outline */
+
+        /* Key: Apply the transition property to the 'border-color' over 0.3 seconds */
+        transition: border-color 0.3s ease-in-out;
+      }
+
+      #myInput:focus {
+        /* State when the input is clicked/active */
+        border-color: black; /* Changes the border color to black */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input-container">
+      <label for="myInput">Type Here:</label>
+      <input type="text" id="myInput" placeholder="Start typing..." />
+    </div>
+  </body>
+</html>
