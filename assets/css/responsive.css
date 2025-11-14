@@ -468,6 +468,7 @@
                  }
 
                  .form-container {
+                     padding: 30px 0;
                      gap: 10px;
 
                      div {
@@ -475,17 +476,24 @@
 
                          input {
                              padding: 6px 0 6px 14px;
-                         }
-                     }
-
-                     .name-date-inputs {
-                         input {
                              font-size: 14px;
+
+                             &::placeholder {
+                                 font-size: 14px;
+                             }
                          }
                      }
 
-                     .date-event-inputs {
-                         input {}
+                     .message-input {
+                         input {
+                             padding: 10px 0 60px 14px;
+                             border: 1px solid transparent;
+                             width: 100%;
+
+                             &:focus {
+                                 border: 1px solid black;
+                             }
+                         }
                      }
                  }
              }

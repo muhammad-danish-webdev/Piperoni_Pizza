@@ -495,8 +495,8 @@
                     font-size: 16px;
                     line-height: 35px;
                     outline: none;
-                    transition: all 0.6s ease;
-                    border: 1px solid transparent;
+                    transition: all 0.3s ease;
+                    border: 1px solid white;
 
                     &::placeholder {
                         color: #cec4c4;
@@ -530,22 +530,22 @@
                     border: 1px solid transparent;
                     width: 100%;
                 }
+            }
 
-                .submit-btn {
-                    min-width: max-content;
-                    max-width: max-content;
-                    margin: 0 auto;
-                    font-weight: 700;
-                    font-size: 15px;
-                    letter-spacing: 2px;
-                    line-height: 20px;
-                    text-transform: uppercase;
-                    padding: 5px 30px;
-                    border-radius: 200px;
-                    border: none;
-                    background-color: red;
-                    color: white;
-                }
+            .submit-btn {
+                min-width: max-content;
+                max-width: max-content;
+                margin: 20px auto 0;
+                font-weight: 700;
+                font-size: 15px;
+                letter-spacing: 2px;
+                line-height: 20px;
+                text-transform: uppercase;
+                padding: 5px 30px;
+                border-radius: 200px;
+                border: none;
+                background-color: red;
+                color: white;
             }
         }
     }
