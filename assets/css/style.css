@@ -4,13 +4,6 @@
 /* -----------------------------------
 -----START :: Pizza Header Section ---
 -------------------------------------*/
-/* .bg-image { */
-/* position: relative;
-    background-image: url(../media/hero-background-img.jpg);
-    inset: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
 .pizza-header-section {
     padding: 50px 0 64px;
     position: relative;
@@ -459,6 +452,8 @@
 -------------------------------------*/
 .pizza-form-section {
     .container {
+        width: calc(100% - 50px);
+
         .pizza-form-container {
             h2 {
                 font-weight: 700;
@@ -477,7 +472,7 @@
                 width: 100%;
                 display: flex;
                 flex-direction: column;
-                gap: 40px;
+                gap: 18px;
                 margin: 0 auto;
 
                 div {
@@ -553,4 +548,120 @@
 
 /* -----------------------------------
 -----END :: Pizza Form Section ---
+-------------------------------------*/
+/* -----------------------------------
+----- START :: Pizza CTA Section ---
+-------------------------------------*/
+.pizza-cta-section {
+    padding: 10px 0 70px;
+
+    .container {
+        width: calc(100% - 60px);
+
+        .pizza-cta-container {
+            display: flex;
+            gap: 22px;
+            align-items: stretch;
+            justify-content: center;
+
+            .cta-container {
+                padding-left: 64px;
+                padding: 28px 30px 28px 64px;
+                background-color: #fff;
+                max-width: 486px;
+                width: 100%;
+                border-radius: 30px;
+                display: flex;
+                gap: 42px;
+                align-items: center;
+                justify-content: center;
+
+                .cta-icon-list {
+                    display: flex;
+                    gap: 18px;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    & :nth-child(3) {
+                        svg {
+                            width: 27px;
+                            height: 27px;
+                        }
+                    }
+                }
+            }
+
+            .cta-content {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h4 {
+                    color: #2A2A2A;
+                    font-family: "jost", sans-serif;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 25px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+
+                p {
+                    font-family: "Aleo", serif;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: #2A2A2A;
+                }
+
+                span {
+                    font-family: "Aleo", serif;
+                    color: #2A2A2A;
+
+                    strong {
+                        a {
+                            color: #2A2A2A;
+                            font-family: "Aleo", serif;
+
+                            &:hover {
+                                text-decoration: underline;
+                                text-underline-offset: 3px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & :nth-child(2).cta-container {
+            background-color: #2A2A2A;
+            color: white;
+            padding-left: 44px;
+            padding: 28px 50px 28px 44px;
+            gap: 27px;
+
+            .cta-content {
+                gap: 10px;
+
+                h4 {
+                    color: white;
+                }
+
+                p {
+                    color: white;
+                    letter-spacing: 1px;
+                    font-size: 15px;
+
+                    strong {
+                        font-family: "aleo", serif;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* -----------------------------------
+-----END :: Pizza CTA Section ---
 -------------------------------------*/

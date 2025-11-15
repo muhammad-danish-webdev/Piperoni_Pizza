@@ -89,6 +89,40 @@
              }
          }
      }
+
+     /* ########################  */
+     /* ########################  */
+     /* ########################  */
+     /* ########################  */
+     .pizza-cta-section {
+         .container {
+             .pizza-cta-container {
+                 flex-direction: column;
+
+                 .cta-container {
+                     .cta-icon-list {
+                         li {
+                             svg {
+                                 path {}
+                             }
+                         }
+                     }
+
+                     .cta-content {
+                         h4 {}
+
+                         p {}
+
+                         span {
+                             strong {
+                                 a {}
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
  }
 
  /* === Responsive At 992px
@@ -363,7 +397,7 @@
          padding: 60px 0;
 
          .container {
-             width: calc(100% - 50px);
+             width: calc(100% - 40px);
 
              .pizza-menu-container {
                  .menu-container {
@@ -407,6 +441,72 @@
 
                      .date-event-inputs {
                          input {}
+                     }
+                 }
+             }
+         }
+     }
+
+     /* ###########################  */
+     /* ###########################  */
+     /* ###########################  */
+     /* ###########################  */
+     .pizza-cta-section {
+         .container {
+             .pizza-cta-container {
+                 .cta-container {
+                     border-radius: 16px;
+                     gap: 12px;
+                     padding: 18px 20px 18px 20px;
+
+                     .cta-icon-list {
+                         gap: 12px;
+
+                         li {
+                             svg {
+                                 width: 20px;
+                                 height: 20px;
+                             }
+                         }
+                     }
+
+                     .cta-content {
+                         h4 {
+                             font-size: 16px;
+                             line-height: 22px;
+                         }
+
+                         p {
+                             font-size: 12px;
+                             line-height: 16px;
+                         }
+
+                         span {
+                             font-size: 14px;
+                             line-height: 16px;
+
+                             strong {
+                                 a {}
+                             }
+                         }
+                     }
+                 }
+
+                 & :nth-child(2).cta-container {
+                     .cta-icon-list {
+                         li {
+                             svg {
+                                 width: 40px;
+                                 height: 40px;
+                             }
+                         }
+                     }
+
+                     .cta-content {
+                         h4 {
+                             font-size: 14px;
+                             line-height: 19px;
+                         }
                      }
                  }
              }
@@ -486,7 +586,7 @@
 
                      .message-input {
                          input {
-                             padding: 10px 0 60px 14px;
+                             padding: 2px 0 60px 14px;
                              border: 1px solid transparent;
                              width: 100%;
 
