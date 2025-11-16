@@ -136,3 +136,52 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(image);
   });
 });
+
+// ######################
+// ######################
+// ######################
+// ######################
+
+/**
+ * Scroll-triggered animation for the pizza menu section.
+ * Uses the Intersection Observer API.
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Select the elements to animate
+  const menuContainers = document.querySelectorAll(
+    ".pizza-menu-container .menu-container"
+  );
+
+  // Check if elements exist before proceeding
+  if (menuContainers.length === 0) {
+    return;
+  }
+
+  // 2. Define the observer options
+  const observerOptions = {
+    root: null, // relative to the viewport
+    rootMargin: "0px",
+    threshold: 0.1, // Trigger when 10% of the element is visible
+  };
+
+  // 3. Create the observer callback function
+  const observerCallback = (entries, observer) => {
+    entries.forEach((entry) => {
+      // If the element is intersecting (visible)
+      if (entry.isIntersecting) {
+        // Add the class to start the animation
+        entry.target.classList.add("animate-in");
+        // Stop observing it after it's animated once
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  // 4. Create the Intersection Observer instance
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  // 5. Start observing each menu container
+  menuContainers.forEach((container) => {
+    observer.observe(container);
+  });
+});

@@ -350,6 +350,7 @@
                     opacity: 1;
                     /* Aur apni original position par wapas aa jayega */
                     transform: translateY(0);
+                    height: 100%;
                 }
             }
         }
@@ -436,6 +437,29 @@
                 }
             }
         }
+
+        /* Add to your existing CSS */
+        .pizza-menu-container .menu-container {
+            /* Existing styles... */
+            /* 1. Initial State (Hidden/Off-Screen) */
+            opacity: 0;
+            transform: translateY(50px);
+            /* Start slightly below final position */
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            /* Smooth transition */
+        }
+
+        /* 2. Final State (Visible/Animated) */
+        .pizza-menu-container .menu-container.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 3. Specific delay for the second (gourmet) container */
+        .pizza-menu-container .gourmet-pizza {
+            transition-delay: 0.2s;
+            /* Start the animation for the second box slightly later */
+        }
     }
 }
 
@@ -472,12 +496,12 @@
                 width: 100%;
                 display: flex;
                 flex-direction: column;
-                gap: 18px;
+                gap: 14px;
                 margin: 0 auto;
 
                 div {
                     display: flex;
-                    gap: 25px;
+                    gap: 14px;
                 }
 
                 input {
@@ -520,10 +544,30 @@
             }
 
             .message-input {
-                input {
+                textarea {
                     padding: 10px 0 40px 24px;
-                    border: 1px solid transparent;
-                    width: 100%;
+                    font-family: "DM Sans", sans-serif;
+                    border-radius: 10px;
+                    color: black;
+                    font-weight: 400;
+                    font-size: 16px;
+                    outline: none;
+                    resize: none;
+                    min-width: 100%;
+                    transition: all 0.3s ease;
+                    border: 1px solid white;
+
+                    &::placeholder {
+                        color: #cec4c4;
+                        font-family: "DM Sans", sans-serif;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 35px;
+                    }
+
+                    &:focus {
+                        border: 1px solid black;
+                    }
                 }
             }
 
@@ -742,10 +786,8 @@
                     span {
                         font-family: "Jost", sans-serif;
                         font-weight: 600;
-                        font-size: 19px;
-                        line-height: 21px;
                         font-size: min(1.3vw, 19px);
-                        line-height: min(2.2vw, 32px);
+                        line-height: min(2.2vw, 27px);
                         letter-spacing: 3px;
                         text-align: center;
                         text-transform: uppercase;

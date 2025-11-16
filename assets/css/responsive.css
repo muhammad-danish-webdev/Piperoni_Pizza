@@ -102,26 +102,6 @@
 
                  .cta-container {
                      max-width: 70%;
-
-                     .cta-icon-list {
-                         li {
-                             svg {
-                                 path {}
-                             }
-                         }
-                     }
-
-                     .cta-content {
-                         h4 {}
-
-                         p {}
-
-                         span {
-                             strong {
-                                 a {}
-                             }
-                         }
-                     }
                  }
              }
          }
@@ -185,18 +165,13 @@
          .container {
              .pizza-menu-container {
                  flex-direction: column;
+                 gap: 30px;
 
                  .menu-container {
                      max-width: 100%;
                      width: 100%;
                      padding: 40px 32px;
                      border-radius: 26px;
-
-                     .menu-list {
-                         li {
-                             p {}
-                         }
-                     }
                  }
              }
          }
@@ -330,18 +305,6 @@
                      font-size: 18px;
                      line-height: 26px;
                  }
-
-                 .form-container {
-                     div {}
-
-                     .name-date-inputs {
-                         input {}
-                     }
-
-                     .date-event-inputs {
-                         input {}
-                     }
-                 }
              }
          }
      }
@@ -397,7 +360,7 @@
      }
 
      .pizza-menu-section {
-         padding: 60px 0;
+         padding: 50px 0;
 
          .container {
              width: calc(100% - 40px);
@@ -406,8 +369,6 @@
                  .menu-container {
                      border-radius: 30px;
                      padding: 36px 26px;
-
-                     h4 {}
 
                      .menu-list {
                          gap: 10px;
@@ -434,18 +395,6 @@
                      font-size: 15px;
                      line-height: 20px;
                  }
-
-                 .form-container {
-                     div {}
-
-                     .name-date-inputs {
-                         input {}
-                     }
-
-                     .date-event-inputs {
-                         input {}
-                     }
-                 }
              }
          }
      }
@@ -455,6 +404,8 @@
      /* ###########################  */
      /* ###########################  */
      .pizza-cta-section {
+         padding-bottom: 40px;
+
          .container {
              .pizza-cta-container {
                  .cta-container {
@@ -488,10 +439,6 @@
                          span {
                              font-size: 14px;
                              line-height: 16px;
-
-                             strong {
-                                 a {}
-                             }
                          }
                      }
                  }
@@ -530,12 +477,6 @@
 
                      .footer-logo {
                          width: 32vw;
-
-                         img {}
-                     }
-
-                     p {
-                         a {}
                      }
                  }
 
@@ -555,10 +496,6 @@
 
                  .footer-images {
                      flex-direction: row;
-
-                     div {
-                         max-width: 130px;
-                     }
                  }
              }
          }
@@ -636,14 +573,10 @@
                      }
 
                      .message-input {
-                         input {
+                         textarea {
                              padding: 2px 0 60px 14px;
                              border: 1px solid transparent;
                              width: 100%;
-
-                             &:focus {
-                                 border: 1px solid black;
-                             }
                          }
                      }
                  }
@@ -658,34 +591,20 @@
      .pizza-footer-section {
          .container {
              .pizza-footer-container {
-                 .footer-logo-container {
-                     .footer-logo {
-                         img {}
-                     }
-
-                     p {
-                         a {}
-                     }
-                 }
-
                  .footer-content {
                      p {
                          font-size: 12px;
                          line-height: 18px;
                      }
-
-                     .footer-cta-links {
-                         span {}
-                     }
                  }
 
                  .footer-images {
                      .footer-rating-image {
-                         img {}
+                         width: 70px;
                      }
 
                      .footer-piperoni-image {
-                         img {}
+                         width: 50px;
                      }
                  }
              }
