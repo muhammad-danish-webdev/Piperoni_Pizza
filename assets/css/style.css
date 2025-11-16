@@ -665,3 +665,120 @@
 /* -----------------------------------
 -----END :: Pizza CTA Section ---
 -------------------------------------*/
+/* ########################  */
+/* ########################  */
+/* ########################  */
+/* ########################  */
+/* -----------------------------------
+-----START :: Pizza Footer Section ---
+-------------------------------------*/
+.pizza-footer-section {
+    background: red;
+    padding: 73px 120px 20px 110px;
+
+    .container {
+        .pizza-footer-container {
+            display: flex;
+            justify-content: space-between;
+
+            .footer-logo-container {
+                display: flex;
+                gap: 70px;
+                flex-direction: column;
+
+                .footer-logo {
+                    max-width: 180px;
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                p {
+                    font-family: "Aleo", serif;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 18px;
+                    letter-spacing: 1px;
+                    color: white;
+
+                    a {
+                        font-family: "Aleo", serif;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 18px;
+                        color: white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .footer-content {
+                color: white;
+                max-width: 500px;
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+
+                p {
+                    font-family: "Jost", sans-serif;
+                    font-weight: 600;
+                    font-size: 19px;
+                    line-height: 32px;
+                    text-align: center;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                }
+
+                .footer-cta-links {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    span {
+                        font-family: "Jost", sans-serif;
+                        font-weight: 600;
+                        font-size: 19px;
+                        line-height: 21px;
+                        letter-spacing: 3px;
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            .footer-images {
+                display: flex;
+                flex-direction: column;
+                gap: 22px;
+                align-items: center;
+
+                .footer-rating-image {
+                    width: 160px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+
+                .footer-piperoni-image {
+                    width: 80px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* -----------------------------------
+-----END :: Pizza Footer Section ---
+-------------------------------------*/
