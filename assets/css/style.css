@@ -739,7 +739,6 @@
                     display: flex;
                     flex-direction: column;
 
-                    /* gap: 15px; */
                     span {
                         font-family: "Jost", sans-serif;
                         font-weight: 600;
