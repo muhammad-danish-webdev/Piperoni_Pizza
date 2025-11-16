@@ -539,7 +539,7 @@
                 padding: 5px 30px;
                 border-radius: 200px;
                 border: none;
-                background-color: red;
+                background-color: #D31217;
                 color: white;
             }
         }
@@ -673,10 +673,12 @@
 -----START :: Pizza Footer Section ---
 -------------------------------------*/
 .pizza-footer-section {
-    background: red;
+    background: #D31217;
     padding: 73px 120px 20px 110px;
 
     .container {
+        width: 100%;
+
         .pizza-footer-container {
             display: flex;
             justify-content: space-between;
@@ -687,7 +689,7 @@
                 flex-direction: column;
 
                 .footer-logo {
-                    max-width: 180px;
+                    max-width: 16vw;
                     width: 100%;
 
                     img {
@@ -717,8 +719,7 @@
 
             .footer-content {
                 color: white;
-                max-width: 500px;
-                width: 45%;
+                max-width: 431px;
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
@@ -727,8 +728,8 @@
                 p {
                     font-family: "Jost", sans-serif;
                     font-weight: 600;
-                    font-size: 19px;
-                    line-height: 32px;
+                    font-size: min(1.3vw, 19px);
+                    line-height: min(2.2vw, 32px);
                     text-align: center;
                     letter-spacing: 2px;
                     text-transform: uppercase;
@@ -737,13 +738,15 @@
                 .footer-cta-links {
                     display: flex;
                     flex-direction: column;
-                    gap: 15px;
 
+                    /* gap: 15px; */
                     span {
                         font-family: "Jost", sans-serif;
                         font-weight: 600;
                         font-size: 19px;
                         line-height: 21px;
+                        font-size: min(1.3vw, 19px);
+                        line-height: min(2.2vw, 32px);
                         letter-spacing: 3px;
                         text-align: center;
                         text-transform: uppercase;
@@ -758,7 +761,7 @@
                 align-items: center;
 
                 .footer-rating-image {
-                    width: 160px;
+                    width: 13vw;
 
                     img {
                         height: 100%;
@@ -767,7 +770,7 @@
                 }
 
                 .footer-piperoni-image {
-                    width: 80px;
+                    width: 7vw;
 
                     img {
                         height: 100%;
