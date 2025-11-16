@@ -458,6 +458,7 @@
          .container {
              .pizza-cta-container {
                  .cta-container {
+                     max-width: 100%;
                      border-radius: 16px;
                      gap: 12px;
                      padding: 18px 20px 18px 20px;
@@ -510,6 +511,53 @@
                              font-size: 14px;
                              line-height: 19px;
                          }
+                     }
+                 }
+             }
+         }
+     }
+
+     .pizza-footer-section {
+         .container {
+             .pizza-footer-container {
+                 flex-direction: column;
+                 align-items: center;
+
+                 .footer-logo-container {
+                     gap: 10px;
+                     flex-direction: column;
+                     align-items: center;
+
+                     .footer-logo {
+                         width: 32vw;
+
+                         img {}
+                     }
+
+                     p {
+                         a {}
+                     }
+                 }
+
+                 .footer-content {
+                     p {
+                         font-size: 14px;
+                         line-height: 22px;
+                     }
+
+                     .footer-cta-links {
+                         span {
+                             font-size: 12px;
+                             line-height: 22px;
+                         }
+                     }
+                 }
+
+                 .footer-images {
+                     flex-direction: row;
+
+                     div {
+                         max-width: 130px;
                      }
                  }
              }
@@ -597,6 +645,47 @@
                                  border: 1px solid black;
                              }
                          }
+                     }
+                 }
+             }
+         }
+     }
+
+     /* #######################  */
+     /* #######################  */
+     /* #######################  */
+     /* #######################  */
+     .pizza-footer-section {
+         .container {
+             .pizza-footer-container {
+                 .footer-logo-container {
+                     .footer-logo {
+                         img {}
+                     }
+
+                     p {
+                         a {}
+                     }
+                 }
+
+                 .footer-content {
+                     p {
+                         font-size: 12px;
+                         line-height: 18px;
+                     }
+
+                     .footer-cta-links {
+                         span {}
+                     }
+                 }
+
+                 .footer-images {
+                     .footer-rating-image {
+                         img {}
+                     }
+
+                     .footer-piperoni-image {
+                         img {}
                      }
                  }
              }

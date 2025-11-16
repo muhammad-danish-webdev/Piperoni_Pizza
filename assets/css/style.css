@@ -674,7 +674,7 @@
 -------------------------------------*/
 .pizza-footer-section {
     background: #D31217;
-    padding: 73px 120px 20px 110px;
+    padding: 5% 9% 2% 8%;
 
     .container {
         width: 100%;
@@ -682,15 +682,15 @@
         .pizza-footer-container {
             display: flex;
             justify-content: space-between;
+            gap: 14px;
 
             .footer-logo-container {
                 display: flex;
-                gap: 70px;
+                gap: 5vw;
                 flex-direction: column;
 
                 .footer-logo {
-                    max-width: 16vw;
-                    width: 100%;
+                    width: min(17vw, 250px);
 
                     img {
                         width: 100%;
@@ -770,6 +770,7 @@
 
                 .footer-piperoni-image {
                     width: 7vw;
+                    aspect-ratio: 1;
 
                     img {
                         height: 100%;
